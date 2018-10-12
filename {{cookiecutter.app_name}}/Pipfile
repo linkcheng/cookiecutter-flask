@@ -14,31 +14,16 @@ click = ">=5.0"
 
 # Database
 Flask-SQLAlchemy = "==2.3.2"
-psycopg2 = "==2.7.5"
 SQLAlchemy = "==1.2.12"
 
 # Migrations
 Flask-Migrate = "==2.2.0"
 
-# Forms
-Flask-WTF = "==0.14.2"
-WTForms = "==2.2.1"
-
 # Deployment
 gunicorn = ">=19.1.1"
 
-# Webpack
-flask-webpack = "==0.1.0"
-
-# Auth
-Flask-Login = "==0.4.1"
-Flask-Bcrypt = "==0.7.1"
-
 # Caching
 Flask-Caching = ">=1.0.0"
-
-# Debug toolbar
-Flask-DebugToolbar = "==0.10.1"
 
 # Environment variable parsing
 environs = "==4.0.0"
@@ -46,7 +31,6 @@ environs = "==4.0.0"
 [dev-packages]
 # Testing
 pytest = "==3.8.2"
-WebTest = "==2.0.32"
 factory-boy = "==2.11.*"
 
 # Lint and code style

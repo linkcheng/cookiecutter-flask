@@ -2,8 +2,6 @@
 sudo: false  # http://docs.travis-ci.com/user/migrating-from-legacy/
 language: python
 python:
-  - 2.7
-  - 3.5
   - 3.6
 install:
   - pip install cookiecutter

@@ -1,9 +1,9 @@
 {
-	"full_name": "Steven Loria",
-	"email": "sloria1@gmail.com",
-	"github_username": "sloria",
+	"full_name": "Link Cheng",
+	"email": "linkcheng1992@gmail.com",
+	"github_username": "linkcheng",
 	"project_name": "My Flask App",
 	"app_name": "myflaskapp",
 	"project_short_description": "A flasky app.",
-	"use_pipenv": ["no", "yes"]
+	"use_pipenv": "yes"
 }

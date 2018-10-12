@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
-"""Database module, including the SQLAlchemy database object and DB-related utilities."""
+"""Database module, including the SQLAlchemy database object
+and DB-related utilities."""
 from .compat import basestring
-from .extensions import db
+from app.extensions import db
 
 # Alias common SQLAlchemy names
 Column = db.Column
@@ -9,7 +10,9 @@ relationship = db.relationship
 
 
 class CRUDMixin(object):
-    """Mixin that adds convenience methods for CRUD (create, read, update, delete) operations."""
+    """Mixin that adds convenience methods for CRUD
+    (create, read, update, delete) operations.
+    """
 
     @classmethod
     def create(cls, **kwargs):
@@ -45,7 +48,9 @@ class Model(CRUDMixin, db.Model):
 # From Mike Bayer's "Building the app" talk
 # https://speakerdeck.com/zzzeek/building-the-app
 class SurrogatePK(object):
-    """A mixin that adds a surrogate integer 'primary key' column named ``id`` to any declarative-mapped class."""
+    """A mixin that adds a surrogate integer 'primary key' column named ``id``
+    to any declarative-mapped class.
+    """
 
     __table_args__ = {'extend_existing': True}
 
