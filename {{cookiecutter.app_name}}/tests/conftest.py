@@ -3,8 +3,8 @@
 
 import pytest
 
-from app.app import create_app
-from app.database import db as _db
+from ..app.app import create_app
+from ..app.database import db as _db
 
 
 @pytest.fixture

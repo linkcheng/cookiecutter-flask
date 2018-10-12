@@ -19,7 +19,6 @@ Run the following commands to bootstrap your environment ::
     {%- endif %}
     cp .env.example .env
 
-You will see a pretty welcome screen.
 
 Once you have installed your DBMS, run the following to create your app's
 database tables and perform the initial migration ::

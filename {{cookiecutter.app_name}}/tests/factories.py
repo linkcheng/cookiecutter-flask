@@ -2,7 +2,7 @@
 """Factories to help in tests."""
 from factory.alchemy import SQLAlchemyModelFactory
 
-from app.database import db
+from ..app.database import db
 
 
 class BaseFactory(SQLAlchemyModelFactory):
