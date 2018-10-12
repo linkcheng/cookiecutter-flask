@@ -35,23 +35,14 @@ nosetests.xml
 .pydevproject
 
 # Complexity
-output/*.html
-output/*/index.html
+output/
 
 # Sphinx
 docs/_build
 
-.webassets-cache
-
 # Virtualenvs
 env/
-
-# npm
-/node_modules/
-
-# webpack-built files
-/{{cookiecutter.app_name}}/static/build/
-/{{cookiecutter.app_name}}/webpack/manifest.json
+venv/
 
 # Configuration
 .env

@@ -15,7 +15,5 @@ ENV = env.str('FLASK_ENV', default='production')
 DEBUG = ENV == 'development'
 SQLALCHEMY_DATABASE_URI = env.str('DATABASE_URL')
 SECRET_KEY = env.str('SECRET_KEY')
-DEBUG_TB_ENABLED = DEBUG
-DEBUG_TB_INTERCEPT_REDIRECTS = False
 CACHE_TYPE = 'simple'  # Can be "memcached", "redis", etc.
 SQLALCHEMY_TRACK_MODIFICATIONS = False

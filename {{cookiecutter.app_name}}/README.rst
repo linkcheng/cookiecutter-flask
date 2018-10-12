@@ -13,7 +13,7 @@ Run the following commands to bootstrap your environment ::
     git clone https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}
     cd {{cookiecutter.app_name}}
     {%- if cookiecutter.use_pipenv == "yes" %}
-    pipenv install --dev
+    pipenv install --dev   # if error, try: pipenv run pip install pip==18.0
     {%- else %}
     pip install -r requirements/dev.txt
     {%- endif %}

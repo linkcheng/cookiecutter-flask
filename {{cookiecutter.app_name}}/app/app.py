@@ -33,8 +33,8 @@ def register_blueprints(app):
     """Register Flask blueprints."""
     for name in find_modules('app.blueprints'):
         mod = import_string(name)
-        # if hasattr(mod, 'scorecard_bp'):
-        #     app.register_blueprint(mod.scorecard_bp)
+        if hasattr(mod, 'public_pb'):
+            app.register_blueprint(mod.public_pb)
 
     return None
 
