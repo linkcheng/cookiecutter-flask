@@ -18,8 +18,6 @@ Run the following commands to bootstrap your environment ::
     pip install -r requirements/dev.txt
     {%- endif %}
     cp .env.example .env
-    npm install
-    npm start  # run the webpack dev server and flask server using concurrently
 
 You will see a pretty welcome screen.
 
@@ -29,8 +27,6 @@ database tables and perform the initial migration ::
     flask db init
     flask db migrate
     flask db upgrade
-    npm start
-
 
 Deployment
 ----------
@@ -40,7 +36,6 @@ To deploy::
     export FLASK_ENV=production
     export FLASK_DEBUG=0
     export DATABASE_URL="<YOUR DATABASE URL>"
-    npm run build   # build assets with webpack
     flask run       # start the flask server
 
 In your production environment, make sure the ``FLASK_DEBUG`` environment
@@ -79,26 +74,3 @@ This will generate a new migration script. Then run ::
 To apply the migration.
 
 For a full migration command reference, run ``flask db --help``.
-
-
-Asset Management
-----------------
-
-Files placed inside the ``assets`` directory and its subdirectories
-(excluding ``js`` and ``css``) will be copied by webpack's
-``file-loader`` into the ``static/build`` directory, with hashes of
-their contents appended to their names.  For instance, if you have the
-file ``assets/img/favicon.ico``, this will get copied into something
-like
-``static/build/img/favicon.fec40b1d14528bf9179da3b6b78079ad.ico``.
-You can then put this line into your header::
-
-    <link rel="shortcut icon" href="{{ "{{" }}asset_url_for('img/favicon.ico') {{ "}}" }}">
-
-to refer to it inside your HTML page.  If all of your static files are
-managed this way, then their filenames will change whenever their
-contents do, and you can ask Flask to tell web browsers that they
-should cache all your assets forever by including the following line
-in your ``settings.py``::
-
-    SEND_FILE_MAX_AGE_DEFAULT = 31556926  # one year
