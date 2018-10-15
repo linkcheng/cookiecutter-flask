@@ -4,7 +4,8 @@ from werkzeug.utils import find_modules, import_string
 from flask import Flask
 
 from .utils import commands
-from .util.error_track import client as sentry
+from .utils.error_track import client as sentry
+from .utils.log import configure_logging
 from .extensions import cache, db, migrate
 
 
@@ -19,6 +20,7 @@ def create_app(config_object='app.settings'):
     register_blueprints(app)
     register_shellcontext(app)
     register_commands(app)
+    register_config(app)
     return app
 
 
@@ -59,3 +61,8 @@ def register_commands(app):
     app.cli.add_command(commands.lint)
     app.cli.add_command(commands.clean)
     app.cli.add_command(commands.urls)
+
+
+def register_config(app):
+    """Register config"""
+    configure_logging()

@@ -13,7 +13,7 @@ Use it now
     $ pip install cookiecutter
     $ cookiecutter https://github.com/linkcheng/cookiecutter-flask-simple.git
 
-You will be asked about your basic info (name, project name, app name, etc.). This info will be used in your new project.
+You will be asked about your basic info (project name, etc.). This info will be used in your new project.
 
 Features
 --------
@@ -38,16 +38,15 @@ Inspiration
 - `flask-basic-registration <https://github.com/mjhea0/flask-basic-registration>`_ by `@mjhea0 <https://github.com/mjhea0>`_
 - `Flask Official Documentation <http://flask.pocoo.org/docs/>`_
 
-
-License
--------
-
-BSD licensed.
-
 Changelog
 ---------
+0.2 (10/15/2018)
+*******************
 
-0.1.0 (10/12/2018)
+- Add logging & raven
+
+
+0.1 (10/12/2018)
 *******************
 
 - First iteration

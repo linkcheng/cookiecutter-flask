@@ -14,8 +14,6 @@ Run the following commands to bootstrap your environment ::
     pip install -r requirements/dev.txt
     {%- endif %}
     cp .env.example .env
-    cp db.yml.default $DATABASE_CONFIG_FILE
-
 
 Once you have installed your DBMS, run the following to create your app's
 database tables and perform the initial migration ::

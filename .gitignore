@@ -34,16 +34,5 @@ nosetests.xml
 .project
 .pydevproject
 
-# Complexity
-output/*.html
-output/*/index.html
-
-# Sphinx
-docs/_build
-README.html
-
 # Cookiecutter
 output/
-
-myflaskapp/
-bower_components

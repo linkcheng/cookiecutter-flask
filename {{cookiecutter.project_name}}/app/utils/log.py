@@ -6,7 +6,7 @@ import logging.config
 from app.settings import LOG_DIR
 from app.settings import LOG_BACKUP_COUNT
 from app.settings import LOG_ROTATING_FILE_MODE
-from config.APP import SENTRY_DSN
+from app.settings import SENTRY_DSN
 
 
 logger = logging.getLogger('log')
