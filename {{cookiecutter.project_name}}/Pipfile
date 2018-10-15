@@ -1,6 +1,6 @@
 [[source]]
 url = "http://mirrors.aliyun.com/pypi/simple"
-verify_ssl = true
+verify_ssl = false
 name = "pypi"
 
 [packages]
@@ -8,14 +8,10 @@ name = "pypi"
 Flask = "==1.0.2"
 Werkzeug = "==0.14.1"
 click = ">=5.0"
-raven = "==6.7.0"
+raven = {version = "*", extras = ["flask"]}
+pyyaml = "*"
 
 # Database
-Flask-SQLAlchemy = "==2.3.2"
-SQLAlchemy = "==1.2.12"
-
-# Migrations
-Flask-Migrate = "==2.2.0"
 
 # Deployment
 gunicorn = ">=19.1.1"

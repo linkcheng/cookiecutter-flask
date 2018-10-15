@@ -6,7 +6,7 @@ from flask import Flask
 from .utils import commands
 from .utils.error_track import client as sentry
 from .utils.log import configure_logging
-from .extensions import cache, db, migrate
+from .extensions import cache
 
 
 def create_app(config_object='app.settings'):
@@ -18,7 +18,6 @@ def create_app(config_object='app.settings'):
     app.config.from_object(config_object)
     register_extensions(app)
     register_blueprints(app)
-    register_shellcontext(app)
     register_commands(app)
     register_config(app)
     return app
@@ -27,8 +26,6 @@ def create_app(config_object='app.settings'):
 def register_extensions(app):
     """Register Flask extensions."""
     cache.init_app(app)
-    db.init_app(app)
-    migrate.init_app(app, db)
     if sentry:
         sentry.init_app(app)
     return None
@@ -42,17 +39,6 @@ def register_blueprints(app):
             app.register_blueprint(mod.public_pb)
 
     return None
-
-
-def register_shellcontext(app):
-    """Register shell context objects."""
-    def shell_context():
-        """Shell context objects."""
-        return {
-            'db': db,
-        }
-
-    app.shell_context_processor(shell_context)
 
 
 def register_commands(app):

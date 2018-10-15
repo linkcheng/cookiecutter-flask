@@ -61,7 +61,7 @@ default_logging_config = {
 time_info_file_handler = {
     'class': 'logging.handlers.TimedRotatingFileHandler',
     'level': 'INFO',
-    'formatter': 'simple',
+    'formatter': 'console',
     'when': 'D',
     'encoding': 'utf8',
     'backupCount': LOG_BACKUP_COUNT,
@@ -70,7 +70,7 @@ time_info_file_handler = {
 time_error_file_handler = {
     'class': 'logging.handlers.TimedRotatingFileHandler',
     'level': 'ERROR',
-    'formatter': 'simple',
+    'formatter': 'console',
     'when': 'D',
     'encoding': 'utf8',
     'backupCount': LOG_BACKUP_COUNT,
@@ -80,7 +80,7 @@ time_error_file_handler = {
 size_info_file_handler = {
     'class': 'logging.handlers.RotatingFileHandler',
     'level': 'INFO',
-    'formatter': 'simple',
+    'formatter': 'console',
     # 当达到 250MB 时分割日志
     'maxBytes': 262144000,
     # 最多保留 100 份文件
@@ -91,7 +91,7 @@ size_info_file_handler = {
 size_error_file_handler = {
     'class': 'logging.handlers.RotatingFileHandler',
     'level': 'ERROR',
-    'formatter': 'simple',
+    'formatter': 'console',
     'maxBytes': 262144000,
     'backupCount': LOG_BACKUP_COUNT,
     'encoding': 'utf8'

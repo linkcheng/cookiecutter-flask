@@ -2,10 +2,11 @@
 
 # Flask
 Flask==1.0.2
-MarkupSafe==1.0
 Werkzeug==0.14.1
 click>=5.0
 raven==6.7.0
+blinker>=1.1
+pyyaml==3.13
 
 # Database
 Flask-SQLAlchemy==2.3.2

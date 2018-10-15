@@ -28,10 +28,10 @@ LOG_BACKUP_COUNT = 30
 LOG_ROTATING_FILE_MODE = 'time'
 
 # sentry
-SENTRY_DSN = env.str('SENTRY_DSN')
+SENTRY_DSN = env.str('SENTRY_DSN', default='')
 
 # 数据库配置文件
-DATABASE_CONFIG_FILE = env.str('DATABASE_CONFIG_FILE')
+DATABASE_CONFIG_FILE = env.str('DATABASE_CONFIG_FILE', default='')
 
 # 数据库配置
 if DATABASE_CONFIG_FILE:

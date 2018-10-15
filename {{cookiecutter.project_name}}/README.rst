@@ -15,12 +15,6 @@ Run the following commands to bootstrap your environment ::
     {%- endif %}
     cp .env.example .env
 
-Once you have installed your DBMS, run the following to create your app's
-database tables and perform the initial migration ::
-
-    flask db init
-    flask db migrate
-    flask db upgrade
 
 Deployment
 ----------
@@ -34,6 +28,14 @@ To deploy::
 In your production environment, make sure the ``FLASK_DEBUG`` environment
 variable is unset or is set to ``0``.
 
+
+Check
+-----
+
+To check the system is running ::
+
+    1. "It works." will get when access http://127.0.0.1:5000/ .
+    2. If "SENTRY_DSN" is configured in ".env" file, when access http://127.0.0.1:5000/error , there will raise an error and send a notification to sentry system.
 
 Shell
 -----
@@ -51,19 +53,3 @@ Running Tests
 To run all tests, run ::
 
     flask test
-
-
-Migrations
-----------
-
-Whenever a database migration needs to be made. Run the following commands ::
-
-    flask db migrate
-
-This will generate a new migration script. Then run ::
-
-    flask db upgrade
-
-To apply the migration.
-
-For a full migration command reference, run ``flask db --help``.
