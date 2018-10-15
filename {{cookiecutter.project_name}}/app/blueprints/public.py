@@ -23,3 +23,4 @@ def log_error():
         1 / 0
     except ZeroDivisionError as e:
         logger.error(f'This is a log error, exp:{e}!', exc_info=True)
+    return 'This is log_error!'

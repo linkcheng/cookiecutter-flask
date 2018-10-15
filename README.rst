@@ -18,8 +18,6 @@ You will be asked about your basic info (project name, etc.). This info will be 
 Features
 --------
 
-- Flask-SQLAlchemy builtin
-- Easy database migrations with Flask-Migrate
 - Configuration in environment variables, as per `The Twelve-Factor App <https://12factor.net/config>`_
 - Procfile for deploying to a PaaS (e.g. Heroku)
 - pytest and Factory-Boy for testing (example tests included)
