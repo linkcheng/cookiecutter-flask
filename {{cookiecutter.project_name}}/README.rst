@@ -7,13 +7,14 @@ Quickstart
 
 Run the following commands to bootstrap your environment ::
 
-    cd {{cookiecutter.app_name}}
+    cd {{cookiecutter.project_name}}
     {%- if cookiecutter.use_pipenv == "yes" %}
     pipenv install --dev   # if error, try: pipenv run pip install pip==18.0
     {%- else %}
     pip install -r requirements/dev.txt
     {%- endif %}
     cp .env.example .env
+    cp db.yml.default $DATABASE_CONFIG_FILE
 
 
 Once you have installed your DBMS, run the following to create your app's
@@ -30,7 +31,6 @@ To deploy::
 
     export FLASK_ENV=production
     export FLASK_DEBUG=0
-    export DATABASE_URL="<YOUR DATABASE URL>"
     flask run       # start the flask server
 
 In your production environment, make sure the ``FLASK_DEBUG`` environment

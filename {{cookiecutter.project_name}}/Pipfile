@@ -1,16 +1,14 @@
 [[source]]
-url = "https://pypi.python.org/simple"
+url = "http://mirrors.aliyun.com/pypi/simple"
 verify_ssl = true
 name = "pypi"
 
 [packages]
 # Flask
 Flask = "==1.0.2"
-MarkupSafe = "==1.0"
 Werkzeug = "==0.14.1"
-Jinja2 = "==2.10"
-itsdangerous = "==0.24"
 click = ">=5.0"
+raven = "==6.7.0"
 
 # Database
 Flask-SQLAlchemy = "==2.3.2"

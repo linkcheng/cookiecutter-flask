@@ -13,7 +13,14 @@ env.read_env()
 
 ENV = env.str('FLASK_ENV', default='production')
 DEBUG = ENV == 'development'
-SQLALCHEMY_DATABASE_URI = env.str('DATABASE_URL')
-SECRET_KEY = env.str('SECRET_KEY')
+
 CACHE_TYPE = 'simple'  # Can be "memcached", "redis", etc.
 SQLALCHEMY_TRACK_MODIFICATIONS = False
+
+LOG_DIR = './logs'
+LOG_BACKUP_COUNT = 30
+LOG_ROTATING_FILE_MODE = 'time'
+
+SENTRY_DSN = ''
+
+DATABASE_CONFIG_FILE = env.str('DATABASE_CONFIG_FILE')

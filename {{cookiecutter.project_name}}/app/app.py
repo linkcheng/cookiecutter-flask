@@ -4,6 +4,7 @@ from werkzeug.utils import find_modules, import_string
 from flask import Flask
 
 from .utils import commands
+from .util.error_track import client as sentry
 from .extensions import cache, db, migrate
 
 
@@ -26,6 +27,8 @@ def register_extensions(app):
     cache.init_app(app)
     db.init_app(app)
     migrate.init_app(app, db)
+    if sentry:
+        sentry.init_app(app)
     return None
 
 

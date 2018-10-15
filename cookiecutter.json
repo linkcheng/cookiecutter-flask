@@ -1,7 +1,4 @@
 {
-	"full_name": "Link Cheng",
-	"email": "linkcheng1992@gmail.com",
-	"project_name": "FlaskApp",
-	"app_name": "flask_app",
-	"use_pipenv": ["no", "yes"]
+	"project_name": "flask_project",
+	"use_pipenv": ["yes", "no"]
 }
